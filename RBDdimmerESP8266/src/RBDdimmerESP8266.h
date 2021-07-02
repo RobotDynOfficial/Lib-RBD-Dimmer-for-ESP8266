@@ -32,8 +32,8 @@ static const uint8_t powerBuf[] = {
 
 #define ALL_DIMMERS 100
 
-void handleInterrupt(void);
-void ICACHE_RAM_ATTR onTimerISR();
+ICACHE_RAM_ATTR void handleInterrupt(void);
+ICACHE_RAM_ATTR void onTimerISR();
 
 class dimmerLampESP8266 
 {         

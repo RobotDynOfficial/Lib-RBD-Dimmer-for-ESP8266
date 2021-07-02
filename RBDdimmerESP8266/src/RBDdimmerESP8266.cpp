@@ -88,9 +88,7 @@ void dimmerLampESP8266::setPower(int power)
 
 int dimmerLampESP8266::getPower(void)
 {
-	if (dimState[this->current_num] == ON)
-		return dimPower[this->current_num];
-	else return 0;
+	return dimPower[this->current_num] ? dimPower[this->current_num] : 0;
 }
 
 void dimmerLampESP8266::setState(ON_OFF_typedef ON_OFF)
